@@ -1,8 +1,10 @@
 package edu.udg.caes;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static junit.framework.TestCase.assertEquals;
+
 
 public class ExercicesIntroTestingTest {
 
@@ -27,6 +29,30 @@ public class ExercicesIntroTestingTest {
     @Test
     public void testOddOrPos(){
         final int result = ExercicesIntroTesting.oddOrPos(new int []{-3, -2, 0, 1, 4});
+        assertEquals(result, 3);
+    }
+
+    @Test
+    public void testFindLastN(){
+        final int result = ExercicesIntroTesting.findLast(new int []{1, 1, 1}, 1);
+        assertEquals(result, 2);
+    }
+
+    @Test
+    public void testLastZeroN(){
+        final int result = ExercicesIntroTesting.lastZero(new int []{0, 1, 0});
+        assertEquals(result, 2);
+    }
+
+    @Test
+    public void testCountPositiveN(){
+        final int result = ExercicesIntroTesting.countPositive(new int []{-4, 2, -2, 2});
+        assertEquals(result, 2);
+    }
+
+    @Test
+    public void testOddOrPosN(){
+        final int result = ExercicesIntroTesting.oddOrPos(new int []{-3, -2, 1, 1, -4});
         assertEquals(result, 3);
     }
 }
